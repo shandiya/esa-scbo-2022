@@ -212,26 +212,27 @@ readRDS("data/imcra_epbc.rds") |>
 
 ##  {#choropleth-gif data-menu-title="Choropleth GIF"}
 ![](images/choropleth_ibra_imcra_observations.gif){fig-align="center"}
-
 ## {#accessing-data data-menu-title="Accessing Data" background-video="videos/ecoassets_website.mov" background-video-muted="true"}
-
 
 
 ## what's next
 
 
-## {#sponsors data-menu-title="Sponsors" background-image=images/last_slide.jpg}
+## {#sponsors data-menu-title="Sponsors" background-image=images/sponsors.jpg}
 
 [EcoAssets]{.custom-final}
 {{< fa globe >}} [ecoassets.org.au](https://ecoassets.org.au){.custom-icons}<br>
-{{< fa display >}} [shandiya.github.io](https://shandiya.github.io){.custom-icons}<br>
+{{< fa display >}} [shandiya.github.io/esa-scbo-2022](https://shandiya.github.io/esa-scbo-2022){.custom-icons}<br>
 {{< fa brands twitter >}} [@ShandiyaB](https://twitter.com/ShandiyaB){.custom-icons}<br>
 
-
-![](images/logo_ala.png){.absolute bottom=30px left=10 width=200px} ![](images/logo_tern.png){.absolute bottom=30px left=220 width=200px} ![](images/logo_imos.png){.absolute bottom=30px left=430 width=200px} ![](images/logo_ardc.png){.absolute bottom=30px left=640 width=200px} ![](images/logo_ncris.png){.absolute bottom=30px left=850 width=200px} ![](images/logo_austgov.png){.absolute bottom=30px left=1060 width=200px}
 [EcoAssets received investment (doi.org/10.47486/XN005) from the Australian Research Data Commons (ARDC). The ARDC is funded by the Australian Research Data National Collaborative Research Infrastructure Strategy (NCRIS).]{.custom-sponsor} 
 
+![](images/logo_ala.png){.absolute bottom=50px left=10 width=200px} ![](images/logo_tern.png){.absolute bottom=50px left=220 width=200px} ![](images/logo_imos.png){.absolute bottom=50px left=430 width=200px} ![](images/logo_ardc.png){.absolute bottom=50px left=640 width=200px} ![](images/logo_ncris.png){.absolute bottom=50px left=850 width=200px} ![](images/logo_austgov.png){.absolute bottom=50px left=1060 width=200px}
 
+
+::: aside
+Image: [Joel Vodell]("https://unsplash.com/@joelvodell?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
+:::
 
 
  
