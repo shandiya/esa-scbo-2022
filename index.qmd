@@ -32,7 +32,7 @@ Image: [Fiona Smallwood]("https://unsplash.com/@thepeoplesdigital?utm_source=uns
 ```{r}
 
 library(galah)
-source("scripts/gt_theme.R")
+source("scripts/functions.R")
 
 search_profiles("ALA") |> 
   show_values() |> 
@@ -110,7 +110,7 @@ Location • Occurrence • Classification
 :::{data-id="ibra-tab"}
 ```{r}
 
-source("scripts/gt_theme.R")
+source("scripts/functions.R")
 
 readRDS("data/ibra_griis.rds") |> 
   head(n = 20) |> 
@@ -131,7 +131,7 @@ readRDS("data/ibra_griis.rds") |>
 ::: {data-id="ibra-tab"}
 ```{r}
 
-source("scripts/gt_theme.R")
+source("scripts/functions.R")
 
 readRDS("data/ibra_griis.rds") |> 
   head(n = 12) |> 
@@ -147,7 +147,25 @@ readRDS("data/ibra_griis.rds") |>
 :::
 
 ::: {.column width="50%"}
-![](images/heatmap_ibra_griis_prop.png)
+```{r}
+#| fig-height: 12
+
+source("scripts/functions.R")
+library(ggplot2)
+library(showtext)
+
+font_add_google("Lato", "lato")
+showtext_auto()
+showtext_opts(dpi = 300)
+
+plot_heatmap(data = readRDS("data/ibra_griis_plotting.rds"),
+             region = ibraRegion,
+             fill_var = prop_invasive,
+             legend_title = "Proportion of introduced/invasive\nspecies in IBRA regions",
+             pal = "YlOrBr",
+             n_breaks = 5)
+                
+```
 :::
 :::
 
@@ -160,7 +178,7 @@ readRDS("data/ibra_griis.rds") |>
 :::{data-id="imcra-tab"}
 ```{r}
 
-source("scripts/gt_theme.R")
+source("scripts/functions.R")
 
 readRDS("data/imcra_epbc.rds") |> 
   head(n = 20) |> 
@@ -182,7 +200,7 @@ readRDS("data/imcra_epbc.rds") |>
 :::{data-id="imcra-tab"}
 ```{r}
 
-source("scripts/gt_theme.R")
+source("scripts/functions.R")
 
 readRDS("data/imcra_epbc.rds") |> 
   head(n = 12) |> 
@@ -198,7 +216,25 @@ readRDS("data/imcra_epbc.rds") |>
 :::
 
 ::: {.column width="50%"}
-![](images/heatmap_imcra_epbc.tiff)
+```{r}
+#| fig-height: 12
+
+source("scripts/functions.R")
+library(ggplot2)
+library(showtext)
+
+font_add_google("Lato", "lato")
+showtext_auto()
+showtext_opts(dpi = 300)
+
+plot_heatmap(data = readRDS("data/imcra_epbc_plotting.rds"),
+             region = imcraRegion,
+             fill_var = prop_listed,
+             legend_title = "Proportion of EPBC-listed\nspecies in IMCRA regions",
+             pal = "BuPu",
+             n_breaks = 5)
+
+```
 :::
 :::
 
