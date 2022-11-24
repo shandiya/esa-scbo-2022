@@ -24,25 +24,6 @@ gt_mytheme <- function(data, ...){
     ) 
 }
 
-# years to time periods -----
-as_period_string <- function(df) {
-  
-  df |>
-    mutate(
-      period = case_when(
-        yearStart == 1900 ~ "1900-1970",
-        yearStart == 1971 ~ "1971 - 1975",
-        yearStart == 1976 ~ "1976 - 1980",
-        yearStart == 1981 ~ "1981 - 1985",
-        yearStart == 1986 ~ "1986 - 1990",
-        yearStart == 1991 ~ "1991 - 1995",
-        yearStart == 1996 ~ "1996 - 2000",
-        yearStart == 2001 ~ "2001 - 2005",
-        yearStart == 2006 ~ "2006 - 2010",
-        yearStart == 2011 ~ "2011 - 2015",
-        yearStart == 2016 ~ "2016 - 2020"))
-  
-}
 
 # plot heatmap ------
 plot_heatmap <- function(data, region, fill_var, legend_title, pal, n_breaks) {
