@@ -1,0 +1,107 @@
+/*-- scss:defaults --*/
+
+$theme-lightgrey: #f3f3f3;
+$theme-darkgrey: #413f42;
+$theme-darkgreen: #1f3729;
+$theme-yellow: #e1caa4;
+
+$body-bg: $theme-lightgrey;
+$body-color: $theme-darkgrey;
+$link-color: $theme-darkgrey;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap');
+
+$presentation-heading-font: 'Fjalla One', sans-serif;
+$font-family-sans-serif: 'Jost', sans-serif;
+$font-family-monospace: 'Fira Code', monospace;
+
+/*-- scss:rules --*/
+
+.reveal .custom-title {
+  font-family: 'Fjalla One', sans-serif;
+  color: $theme-darkgrey;
+  font-size: 2.5em;
+  position: absolute; 
+  left: 15px; 
+  top: 400px
+}
+
+.reveal .custom-subtitle {
+  font-family: 'Fjalla One', sans-serif;
+  color: $theme-darkgrey;
+  font-size: 1.2em;
+  position: absolute; 
+  left: 15px; 
+  top: 525px
+}
+
+.reveal .custom-author {
+  font-family: 'Jost', sans-serif;
+  color: $theme-darkgrey;
+  font-size: 1em;
+  font-weight: 300;
+  position: absolute; 
+  left: 15px; 
+  top: 650px
+}
+
+.reveal .custom-acknowledgement {
+  ffont-family: 'Jost', sans-serif;
+  color: "#00296b";
+  font-size: 1em;
+  font-weight: 200;
+  font-style: italic;
+  position: absolute; 
+  left: 60px; 
+  right: 60px;
+  top: 180px;
+  text-align: justify
+}
+
+
+
+.reveal .custom-icons {
+  font-family: 'Jost', sans-serif;
+  color: $theme-lightgrey;
+  font-size: 1em;
+  font-weight: 200;
+  
+}
+
+.reveal .custom-final {
+  font-family: 'Fjalla One', sans-serif;
+  color: $theme-darkgrey;
+  font-size: 2em;
+  position: absolute; 
+  left: 15px; 
+  top: 50px
+}
+
+.reveal .custom-sponsor {
+  font-family: 'Nunito', sans-serif;
+  color: $theme-darkgrey;
+  font-size: 0.4em;
+  font-weight: 200;
+  position: absolute; 
+  left: 1270px; 
+  bottom: 30px;
+  right: 10px
+}
+
+.reveal .footer {
+  font-family: 'Nunito', sans-serif !important;
+  font-weight: 200 !important;
+}
+
+.reveal .slide aside,
+.reveal .slide div.aside {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.5em;
+  color: $theme-darkgrey;
+}

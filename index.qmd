@@ -1,0 +1,240 @@
+---
+pagetitle: "EcoAssets"
+format:
+  revealjs: 
+    theme: [default, custom.scss]
+    highlight-style: a11y
+    code-line-numbers: false
+    height: 900
+    width: 1600
+editor: visual
+---
+
+##  {#title data-menu-title="Title" background-image=images/title.jpg}
+[EcoAssets]{.custom-title}
+[Building data linkages for <br> environmental reporting]{.custom-subtitle}
+[Shandiya Balasubramaniam (she/her) <br> {{< fa brands twitter >}} @ShandiyaB <br> Data Analyst | Atlas of Living Australia <br> ESA-SCBO 2022]{.custom-author}
+
+::: aside
+Image: [Will Turner]("https://unsplash.com/ja/@turner_imagery?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
+:::
+
+##  {#acknowledgement data-menu-title="Acknowledgement" background-image="images/acknowledgement.jpg"}
+
+[I acknowledge the Traditional Owners of the lands on which I live and work, the Wurundjeri People of the Kulin Nation, and pay my respects to Elders past and present. I recognise the spiritual and cultural significance of land, water, and all that is in the environment to Traditional Owners, and their continuing connection to Country.]{.custom-acknowledgement}
+
+::: aside
+Image: [Fiona Smallwood]("https://unsplash.com/@thepeoplesdigital?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
+:::
+
+##  {#general-profile data-menu-title="ALA General Profile"}
+
+```{r}
+
+library(galah)
+source("scripts/gt_theme.R")
+
+search_profiles("ALA") |> 
+  show_values() |> 
+  gt() |> 
+  cols_label(description = "Description",
+             filter = "Filter") |> 
+  gt_mytheme() |> 
+  tab_options(table.font.size = 19,
+              column_labels.font.size = 24,
+              data_row.padding = 1.5) |> 
+  as_raw_html()
+
+```
+
+::: footer 
+[ALA General Data Profile](https://support.ala.org.au/support/solutions/articles/6000240256-getting-started-with-the-data-quality-filters)
+:::
+
+
+##  {#occ-01 data-menu-title="Occurrence 01"}
+
+![](images/pied_oyster.png){.absolute top=50px left=525 width=250px height=250px} ![](images/green_golden_bell.png){.absolute top=50px right=525 width=250px height=250px} ![](images/marsup.png){.absolute top=350px left=525 width=250px height=250px} ![](images/blue_tongue.png){.absolute top=350px right=525 width=250px height=250px}
+
+::: footer 
+• Occurrence •
+:::
+
+
+##  {#occ-02 data-menu-title="Occurrence 02"}
+
+![](images/pied_oyster.png){.absolute top=50px left=525 width=250px height=250px} ![](images/green_golden_bell.png){.absolute top=50px right=525 width=250px height=250px} ![](images/marsup.png){.absolute top=350px left=525 width=250px height=250px} ![](images/blue_tongue.png){.absolute top=350px right=525 width=250px height=250px}
+![](images/pin.png){.absolute top=250px left=200 width=200} 
+
+::: footer 
+Location • Occurrence • 
+:::
+
+
+##  {#occ-03 data-menu-title="Occurrence 03"}
+
+![](images/pied_oyster.png){.absolute top=50px left=525 width=250px height=250px} ![](images/green_golden_bell.png){.absolute top=50px right=525 width=250px height=250px} ![](images/marsup.png){.absolute top=350px left=525 width=250px height=250px} ![](images/blue_tongue.png){.absolute top=350px right=525 width=250px height=250px}
+![](images/pin.png){.absolute top=250px left=200 width=200} 
+![](images/taxonomy.png){.absolute top=250px right=25 width=450px}
+
+::: footer 
+Location • Occurrence • Classification
+:::
+
+
+##  {#occ-04 data-menu-title="Occurrence 04"}
+
+![](images/pied_oyster.png){.absolute top=50px left=525 width=250px height=250px} ![](images/green_golden_bell.png){.absolute top=50px right=525 width=250px height=250px} ![](images/marsup.png){.absolute top=350px left=525 width=250px height=250px} ![](images/blue_tongue.png){.absolute top=350px right=525 width=250px height=250px}
+![](images/pin.png){.absolute top=250px left=200 width=200} 
+![](images/taxonomy.png){.absolute top=250px right=25 width=450px}
+![](images/capad_ibra_imcra.png){.absolute top=450px left=200 height=250}
+
+::: footer 
+Location • Occurrence • Classification
+:::
+
+
+##  {#occ-05 data-menu-title="Occurrence 05"}
+
+![](images/pied_oyster.png){.absolute top=50px left=525 width=250px height=250px} ![](images/green_golden_bell.png){.absolute top=50px right=525 width=250px height=250px} ![](images/marsup.png){.absolute top=350px left=525 width=250px height=250px} ![](images/blue_tongue.png){.absolute top=350px right=525 width=250px height=250px}
+![](images/pin.png){.absolute top=250px left=200 width=200} 
+![](images/taxonomy.png){.absolute top=250px right=25 width=450px}
+![](images/capad_ibra_imcra.png){.absolute top=450px left=200 height=250}
+![](images/epbc_griis.png){.absolute top=450 right=200 height=250}
+
+::: footer 
+Location • Occurrence • Classification
+:::
+
+## {#ibra-table data-menu-title="IBRA GRIIS data" auto-animate=true}
+:::{data-id="ibra-tab"}
+```{r}
+
+source("scripts/gt_theme.R")
+
+readRDS("data/ibra_griis.rds") |> 
+  head(n = 20) |> 
+  gt() |> 
+  gt_mytheme() |> 
+  as_raw_html()
+
+```
+:::
+
+::: footer 
+[IBRA - GRIIS](https://ecoassets.org.au/data/summary-data-introduced-species-occurrences-by-terrestrial-ecoregion/)
+:::
+
+## {#ibra-table-fig data-menu-title="IBRA GRIIS datavis" auto-animate=true}
+::: columns  
+::: {.column width="50%"}
+::: {data-id="ibra-tab"}
+```{r}
+
+source("scripts/gt_theme.R")
+
+readRDS("data/ibra_griis.rds") |> 
+  head(n = 12) |> 
+  gt() |> 
+  gt_mytheme() |> 
+  tab_options(table.font.size = 16,
+              column_labels.font.size = 20,
+              data_row.padding = 2) |> 
+  as_raw_html()
+
+```
+:::
+:::
+
+::: {.column width="50%"}
+![](images/heatmap_ibra_griis_prop.png)
+:::
+:::
+
+::: footer 
+[IBRA - GRIIS](https://ecoassets.org.au/data/summary-data-introduced-species-occurrences-by-terrestrial-ecoregion/)
+:::
+
+
+## {#imcra-table data-menu-title="IMCRA EPBC data" auto-animate=true}
+:::{data-id="imcra-tab"}
+```{r}
+
+source("scripts/gt_theme.R")
+
+readRDS("data/imcra_epbc.rds") |> 
+  head(n = 20) |> 
+  gt() |> 
+  gt_mytheme() |> 
+  as_raw_html()
+
+```
+:::
+
+::: footer 
+[IMCRA - EPBC](https://ecoassets.org.au/data/summary-data-threatened-species-occurrences-by-marine-ecoregion/)
+:::
+
+
+## {#imcra-table-fig data-menu-title="IMCRA EPBC datavis" auto-animate=true}
+::: columns  
+::: {.column width="50%"}
+:::{data-id="imcra-tab"}
+```{r}
+
+source("scripts/gt_theme.R")
+
+readRDS("data/imcra_epbc.rds") |> 
+  head(n = 12) |> 
+  gt() |> 
+  gt_mytheme() |> 
+  tab_options(table.font.size = 16,
+              column_labels.font.size = 20,
+              data_row.padding = 2) |> 
+  as_raw_html()
+
+```
+:::
+:::
+
+::: {.column width="50%"}
+![](images/heatmap_imcra_epbc.tiff)
+:::
+:::
+
+::: footer 
+[IMCRA - EPBC](https://ecoassets.org.au/data/summary-data-threatened-species-occurrences-by-marine-ecoregion/)
+:::
+
+
+##  {#choropleth data-menu-title="Choropleth"}
+![](images/choropleth_ibra_imcra_1900.png){fig-align="center"}
+
+##  {#choropleth-gif data-menu-title="Choropleth GIF"}
+![](images/choropleth_ibra_imcra_observations.gif){fig-align="center"}
+
+## {#accessing-data data-menu-title="Accessing Data" background-video="videos/ecoassets_website.mov" background-video-muted="true"}
+
+
+
+## what's next
+
+
+## {#sponsors data-menu-title="Sponsors" background-image=images/last_slide.jpg}
+
+[EcoAssets]{.custom-final}
+{{< fa globe >}} [ecoassets.org.au](https://ecoassets.org.au){.custom-icons}<br>
+{{< fa display >}} [shandiya.github.io](https://shandiya.github.io){.custom-icons}<br>
+{{< fa brands twitter >}} [@ShandiyaB](https://twitter.com/ShandiyaB){.custom-icons}<br>
+
+
+![](images/logo_ala.png){.absolute bottom=30px left=10 width=200px} ![](images/logo_tern.png){.absolute bottom=30px left=220 width=200px} ![](images/logo_imos.png){.absolute bottom=30px left=430 width=200px} ![](images/logo_ardc.png){.absolute bottom=30px left=640 width=200px} ![](images/logo_ncris.png){.absolute bottom=30px left=850 width=200px} ![](images/logo_austgov.png){.absolute bottom=30px left=1060 width=200px}
+[EcoAssets received investment (doi.org/10.47486/XN005) from the Australian Research Data Commons (ARDC). The ARDC is funded by the Australian Research Data National Collaborative Research Infrastructure Strategy (NCRIS).]{.custom-sponsor} 
+
+
+
+
+ 
+
+
+
