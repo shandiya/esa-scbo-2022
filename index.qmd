@@ -27,6 +27,50 @@ Image: [Will Turner]("https://unsplash.com/ja/@turner_imagery?utm_source=unsplas
 Image: [Fiona Smallwood]("https://unsplash.com/@thepeoplesdigital?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
 :::
 
+
+## {#focus-areas-01 data-menu-title="Areas of Focus 01" background-image="images/skink.jpg" auto-animate=true}
+
+[EcoAssets: Focus Areas]{.custom-header-center data-id="skink"}
+
+::: aside
+Image: [Lottie Corin]("https://unsplash.com/@lottiecorin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
+:::
+
+
+## {#focus-areas-02 data-menu-title="Areas of Focus 02" background-image="images/skink.jpg" auto-animate=true}
+
+
+[EcoAssets: Focus Areas]{.custom-header-left data-id="skink"}
+[1. Improve data pipelines]{.custom-text}
+
+::: aside
+Image: [Lottie Corin]("https://unsplash.com/@lottiecorin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
+:::
+
+
+## {#focus-areas-03 data-menu-title="Areas of Focus 03" background-image="images/skink.jpg"}
+
+[EcoAssets: Focus Areas]{.custom-header-left}
+[1. Improve data pipelines <br>
+2. Deliver aggregated datasets]{.custom-text}
+
+::: aside
+Image: [Lottie Corin]("https://unsplash.com/@lottiecorin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
+:::
+
+
+## {#focus-areas-04 data-menu-title="Areas of Focus 04" background-image="images/skink.jpg"}
+
+[EcoAssets: Focus Areas]{.custom-header-left}
+[1. Improve data pipelines <br>
+2. Deliver aggregated datasets <br>
+3. Support ongoing versioning]{.custom-text}
+
+::: aside
+Image: [Lottie Corin]("https://unsplash.com/@lottiecorin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
+:::
+
+
 ##  {#general-profile data-menu-title="ALA General Profile"}
 
 ```{r}
