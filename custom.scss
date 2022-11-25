@@ -23,7 +23,6 @@ $font-family-monospace: 'Fira Code', monospace;
 
 .reveal .custom-title {
   font-family: 'Fjalla One', sans-serif;
-  color: $theme-darkgrey;
   font-size: 2.5em;
   position: absolute; 
   left: 15px; 
@@ -32,7 +31,6 @@ $font-family-monospace: 'Fira Code', monospace;
 
 .reveal .custom-subtitle {
   font-family: 'Fjalla One', sans-serif;
-  color: $theme-darkgrey;
   font-size: 1.2em;
   position: absolute; 
   left: 15px; 
@@ -41,7 +39,6 @@ $font-family-monospace: 'Fira Code', monospace;
 
 .reveal .custom-author {
   font-family: 'Jost', sans-serif;
-  color: $theme-darkgrey;
   font-size: 1em;
   font-weight: 300;
   position: absolute; 
@@ -62,34 +59,33 @@ $font-family-monospace: 'Fira Code', monospace;
   text-align: justify
 }
 
-.reveal .custom-header-left {
+.reveal .custom-header-top {
   font-family: 'Fjalla One', sans-serif;
-  color: $theme-darkgrey;
   font-size: 2.5em;
   position: absolute; 
   left: 25px; 
   top: 50px
 }
 
-.reveal .custom-header-center {
+.reveal .custom-header-middle {
   font-family: 'Fjalla One', sans-serif;
-  color: $theme-darkgrey;
   font-size: 2.5em;
   position: absolute; 
-  left: 350px; 
-  top: 250px
+  left: 25px; 
+  top: 400px
 }
 
-
-.reveal .custom-text {
-  ffont-family: 'Jost', sans-serif;
-  color: $theme-darkgrey;
-  font-size: 1.2em;
-  font-weight: 400;
+.reveal .custom-header-bottom {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 2.5em;
   position: absolute; 
   left: 25px; 
-  top: 200px;
+  bottom: 100px
+}
 
+.reveal .custom-text {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
 }
 
 
@@ -103,7 +99,6 @@ $font-family-monospace: 'Fira Code', monospace;
 
 .reveal .custom-final {
   font-family: 'Fjalla One', sans-serif;
-  color: $theme-darkgrey;
   font-size: 2em;
   position: absolute; 
   left: 15px; 
@@ -112,7 +107,6 @@ $font-family-monospace: 'Fira Code', monospace;
 
 .reveal .custom-sponsor {
   font-family: 'Nunito', sans-serif;
-  color: $theme-darkgrey;
   font-size: 0.4em;
   font-weight: 200;
   position: absolute; 
@@ -128,9 +122,11 @@ $font-family-monospace: 'Fira Code', monospace;
 
 .reveal .slide aside,
 .reveal .slide div.aside {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  bottom: 0px;
+  right: 0px;
   font-size: 0.5em;
   color: $theme-darkgrey;
 }
