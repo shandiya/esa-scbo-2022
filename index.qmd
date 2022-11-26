@@ -484,5 +484,5 @@ Image: [Joel Vodell]("https://unsplash.com/@joelvodell?utm_source=unsplash&utm_m
 :::
 
 ::: footer
-{{< fa display >}} [shandiya.github.io/esa-scbo-2022](https://shandiya.github.io/esa-scbo-2022) {{< fa brands twitter >}} [@ShandiyaB](https://twitter.com/ShandiyaB)
+{{< fa display >}} [shandiya.quarto.pub/esa-scbo-2022](https://shandiya.quarto.pub/esa-scbo-2022/) {{< fa brands twitter >}} [@ShandiyaB](https://twitter.com/ShandiyaB)
 :::
