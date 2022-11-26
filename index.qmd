@@ -3,11 +3,9 @@ pagetitle: "EcoAssets"
 format:
   revealjs: 
     theme: [default, custom.scss]
-    highlight-style: a11y
-    code-line-numbers: false
     height: 900
     width: 1600
-    editor: visual
+editor: visual
 ---
 
 ##  {#title data-menu-title="Title" background-image="images/title.jpg"}
@@ -36,12 +34,56 @@ Image: [Germane Jaws]("https://unsplash.com/@germanejaws?utm_source=unsplash&utm
 :::
 
 ::: {.notes}
-EcoAssets is a project that brings together 3 research infrastructures ... 
+EcoAssets is a project that brings together 3 research infrastructures, the Atlas of Living Australia, the Terrestrial Ecosystem Research Network, and the Integrated Marine Observing System, to provide data in forms that support environmental reporting, such as the State of the Environment Report. 
+
+These 3 research infrastructures collect, manage, and organise environmental data across different categories:
 :::
 
 
 
 ##  {#what-is-ecoassets-02 data-menu-title="What is EcoAssets 02" background-image="images/emu.jpg"}
+[EcoAssets]{.custom-header-bottom}
+[Atlas of Living Australia: national biodiversity database]{.custom-text-small .absolute bottom="100px"}
+
+::: aside
+Image: [Germane Jaws]("https://unsplash.com/@germanejaws?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
+:::
+
+::: {.notes}
+The ALA is Australia’s national biodiversity database, bringing together data from natural history collections, government departments, researchers, community groups, and individuals
+:::
+
+
+
+##  {#what-is-ecoassets-03 data-menu-title="What is EcoAssets 02" background-image="images/emu.jpg"}
+[EcoAssets]{.custom-header-bottom}
+[Terrestrial Ecosystem Research Network: terrestrial ecosystem attributes]{.custom-text-small .absolute bottom="100px"}
+
+::: aside
+Image: [Germane Jaws]("https://unsplash.com/@germanejaws?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
+:::
+
+::: {.notes}
+TERN measures key terrestrial ecosystem attributes at hundreds of representative locations and produces ecosystem datasets at a national scale
+:::
+
+
+
+##  {#what-is-ecoassets-04 data-menu-title="What is EcoAssets 04" background-image="images/emu.jpg"}
+[EcoAssets]{.custom-header-bottom}
+[Integrated Marine Observing System: monitoring coastal and open waters]{.custom-text-small .absolute bottom="100px"}
+
+::: aside
+Image: [Germane Jaws]("https://unsplash.com/@germanejaws?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
+:::
+
+::: {.notes}
+and IMOS collects data on all aspects of the marine environment, with extensive monitoring activities in coastal and open waters 
+:::
+
+
+
+##  {#what-is-ecoassets-05 data-menu-title="What is EcoAssets 05" background-image="images/emu.jpg"}
 [EcoAssets]{.custom-header-bottom}
 [Atlas of Living Australia • Terrestrial Ecosystem Research Network • Integrated Marine Observing System]{.custom-text-small .absolute bottom="100px"}
 
@@ -50,20 +92,12 @@ Image: [Germane Jaws]("https://unsplash.com/@germanejaws?utm_source=unsplash&utm
 :::
 
 ::: {.notes}
-...the Atlas of Living Australia, the Terrestrial Ecosystem Research Network, and the Integrated Marine Observing System, to provide data in forms that support environmental reporting, such as the State of the Environment Report. 
-
-These 3 research infrastructures collect, manage, and organise environmental data across different categories:
-
-The ALA is Australia’s national biodiversity database, bringing together data from natural history collections, government departments, researchers, community groups, and individuals.
-
-TERN measures key terrestrial ecosystem attributes at hundreds of representative locations and produces ecosystem datasets at a national scale.
-
-IMOS collects data on all aspects of the marine environment, with extensive monitoring activities in coastal and open waters. 
+Historically, data from these activities have certainly fed into environmental reporting. Notably, the 2016 State of the Environment report referenced particular datasets from these 3 infrastructures, but it was difficult to access the data directly, and there was no opportunity down the track for researchers to evaluate and review the conclusions that were reached using these data
 :::
 
 
 
-##  {#what-is-ecoassets-03 data-menu-title="What is EcoAssets 03" background-image="images/emu.jpg"}
+##  {#what-is-ecoassets-06 data-menu-title="What is EcoAssets 06" background-image="images/emu.jpg"}
 [EcoAssets]{.custom-header-bottom}
 [Building data linkages for environmental reporting]{.custom-text-small .absolute bottom="100px"}
 
@@ -72,8 +106,6 @@ Image: [Germane Jaws]("https://unsplash.com/@germanejaws?utm_source=unsplash&utm
 :::
 
 :::{.notes}
-Historically, data from these activities have certainly fed into environmental reporting. Notably, the 2016 State of the Environment report referenced particular datasets from these 3 infrastructures, but it was difficult to access the data directly, and there was no opportunity down the track for researchers to evaluate and review the conclusions that were reached using these data. 
-
 EcoAssets addresses this by delivering standardised, comparable data from these infrastructures, in a form that can be versioned to provide ongoing indicators over time. 
 :::
 
@@ -129,23 +161,25 @@ Image: [Lottie Corin]("https://unsplash.com/@lottiecorin?utm_source=unsplash&utm
 :::
 
 :::{.notes}
-And the third is to set up a workflow that supports ongoing delivery of these datasets, in such a way that they can bet versioned over time, so this isn’t just a one-off event
+And the third is to set up a workflow that supports ongoing delivery of these datasets, in such a way that they can be versioned over time, so this isn’t just a one-off event
 
-Today, I’ll be focussing on this second area; I’ll give an overview of how we’ve derived these aggregated biodiversity datasets from occurrence data in the ALA. 
+Today, I’ll be focussing on this second area:
+
+I'll give an overview of how we started with over 100 million records in the Atlas, and ended up with condensed, summary datasets that could be used for reporting 
+:::
+
+
+
+## {#workflow-01 data-menu-title="Workflow 01" auto-animate=true}  
+![](images/workflow_01.png){fig-align="center"}
+
+::: {.notes}
+Imagine, if you will, that you're looking at 110 million records in the Atlas. Some of them will be missing sufficient detail to make them useful, so we start by excluding those using the ALA General Data Quality Profile.
 :::
 
 
 
 ##  {#general-profile data-menu-title="ALA General Profile"}
-![](images/workflow_01.png){fig-align="center"}
-
-:::{.notes}
-We started by passing occurrence records through the ALA General Data Quality Profile, which excludes records that lack sufficient information to be useful, or that may contain common data transcription errors
-:::
-
-
-
-##  {#general-profile-tab data-menu-title="ALA General Profile Filters"}
 
 ```{r}
 
@@ -172,6 +206,8 @@ search_profiles("ALA") |>
 :::{.notes}
 This table shows the 23 checks that the profile applies. We also excluded records prior to 1900, and those that were missing spatial coordinates or species IDs
 :::
+
+
 
 
 
@@ -398,9 +434,7 @@ This image shows the proportion of records that are made up by human observation
 :::{.notes}
 And we can look at how this changes over time... 
 
-This could have implications for users, in terms of deciding what sorts of data to include (or not). For instance, more charismatic species might be over-represented in citizen projects, giving the impression that there's been a population boom
-
-In addition to some of these examples that I've gone through, we're also working with a team at ABARES to support their data requirements for the 2023 State of the Forests Report, which involves facetting the data such that we can assess levels of biodiversity within the national forest estate 
+This could have implications for users, in terms of deciding what sorts of data to include (or not). For instance, more charismatic species might be over-represented in citizen science projects, giving the impression that there's been a population boom. Or museums may have a bias towards collecting certain taxa, depending on the expertise among their staff
 :::
 
 
@@ -421,11 +455,15 @@ Clicking on the DATA tab will navigate to a list of all the available assets, an
 ##  {#up-next data-menu-title="Up Next" background-image="images/frog.jpg"}
 
 [Upcoming]{.custom-header-middle-inv}
-[Event-based datasets]{.custom-text-light .absolute top="450px" left="15px"}
+[• Event-based datasets]{.custom-text-light .absolute top="450px" left="15px"}
+[• State of Forests Report 2023 ]{.custom-text-light .absolute top="510px" left="15px"}
 
 
 :::{.notes}
 The datasets currently available on the website are based on occurrence records in the Atlas, and the next new and exciting thing we’re working on is generating event-based datasets for EcoAssets. IMOS and TERN both collect significant amounts of data at the level of site-based surveys or through species tracking activities, and ALA likewise has extensive datasets from providers like BirdLife, who carry out systematic surveys at regular intervals. We anticipate that these event-based datasets will complement the biodiversity datasets already available, and provide some measure of the extent of monitoring happening across the country. 
+
+
+We're also working with a team at ABARES to support their data requirements for the 2023 State of the Forests Report, which involves facetting the data such that we can assess levels of biodiversity within the national forest estate 
 :::
 
 
